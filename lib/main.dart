@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 final Color mainColor = Color(0xFFFF5656);
 
@@ -18,15 +19,18 @@ class SplashPage extends StatelessWidget {
     return Container(
         color: mainColor,
         child: Stack(
-          children: const [
-            Align(
+          children: [
+            const Align(
               alignment: Alignment.center,
               child: Icon(Icons.terrain, color: Colors.white, size: 90),
             ),
             Align(
                 alignment: Alignment.bottomCenter,
-                child: CircularProgressIndicator(
-                  valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                child: Container(
+                  margin: const EdgeInsets.only(bottom: 80),
+                  child: const CircularProgressIndicator(
+                    valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                  )
                 )
             )
           ],
