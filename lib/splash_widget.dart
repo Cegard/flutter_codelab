@@ -48,7 +48,7 @@ class SplashPage extends StatelessWidget {
 
     Future.delayed(const Duration(seconds: secondsOnSplash), () {
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => const MountsApp()));
+          .push(MaterialPageRoute(builder: (context) => HomePage(mainColor)));
     });
 
     return Container(
